@@ -1,21 +1,26 @@
-/*
 package exercise2;
-import java.util.Scanner;
+import java.util.Random;
 
 public class Lotto {
 
-    int LottoNumber[] = {1,4,8};
+    //Random generator variable and array
+    private int[] lotNumbers = new int[3];
+    private Random random = new Random();
 
-    public static void main(String[] args) {
-
-        Scanner input = new Scanner(System.in);
-
-        //User chooses their number
-        System.out.println("Please pick a number from 3 to 27: ");
-        int magicNumber = input.nextInt();
-
+    //This grabs three numbers from 1-9 into the array
+    public Lotto() {
+        for (int i = 0; i < lotNumbers.length; i++) {
+            lotNumbers[i] = random.nextInt(8) + 1;
+        }
     }
-
-
+    //Grabs the Lotto number to the test
+    public int getLotto() {
+        int count = 0;
+        for (int i = 0; i < lotNumbers.length; i++) {
+            count += lotNumbers[i];
+        }
+        return count;
+    }
 }
-*/
+
+
