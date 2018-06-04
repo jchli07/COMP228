@@ -3,9 +3,9 @@ package exercise1;
 import java.util.Random;
 
 public class Test {
-    public static void main(String[] args) {
 
-    }
+    private String goodMessage[] = {"Good Job!", "Fantastic!"};
+    private String wrongMessage[] = {"Try again!", "Please try harder"};
 
     public simulateQuestion(){
 
@@ -18,8 +18,6 @@ public class Test {
     public generateMessage(){
         Random random = new Random();
 
-        String goodMessage[] = {"Good Job!", "Fantastic!"};
-        String wrongMessage[] = {"Try again!", "Please try harder"};
         if (inputAnswer.good){
             return goodMessage[random.nextInt(goodMessage.length)];
         }

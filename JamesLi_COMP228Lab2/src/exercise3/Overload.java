@@ -5,8 +5,6 @@ public class Overload {
         System.out.printf("Is smaller than %d%n", amount(7));
         System.out.printf("Somehow multiplied into %f Teletubies%n", amount(8.3));
         System.out.printf("See? The word >%s< appeared with method overloading%n", amount("Fantastic"));
-
-
     }
 
     public static int amount(int value){
