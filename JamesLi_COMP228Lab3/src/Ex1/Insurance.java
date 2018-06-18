@@ -4,9 +4,10 @@ public abstract class Insurance {
     private double monthlyCost;
     private final String insuranceType;
 
-    public Insurance(double monthlyCost, String insuranceType){
+    public Insurance(String insuranceType, double monthlyCost){
         //Throw exception if Cost is less than 0
-        if (monthlyCost < 0.0){
+        if (monthlyCost < 0.0)
+        {
             throw new IllegalArgumentException("Monthly Cost cannot be less than 0");
         }
         this.monthlyCost = monthlyCost;

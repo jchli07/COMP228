@@ -2,8 +2,8 @@ package Ex1;
 
 public class Health extends Insurance {
 
-    public Health(double monthlyCost, String insuranceType){
-        super(monthlyCost, insuranceType);
+    public Health(String insuranceType, double monthlyCost){
+        super(insuranceType, monthlyCost);
     }
 
     //To get cost

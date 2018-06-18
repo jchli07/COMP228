@@ -2,8 +2,9 @@ package Ex1;
 
 public class Life extends Insurance{
 
-    public Life(double monthlyCost, String insuranceType){
-        super(monthlyCost, insuranceType);
+    //Constructor
+    public Life(String insuranceType, double monthlyCost){
+        super(insuranceType, monthlyCost);
     }
 
     //To get cost
@@ -15,9 +16,7 @@ public class Life extends Insurance{
     //Message
     @Override
     public String displayInfo(){
-        return String.format("%s%n %s%n %s%n% $%.2f",
-                "Insurance Type:", super.getInsuranceType(), "Insurance Cost:", getMonthlyCost());
-
+        return String.format("%s%n %s%n %s%n% $%.2f", "Insurance Type:", super.getInsuranceType(), "Insurance Cost:", getMonthlyCost());
     }
 }
 
