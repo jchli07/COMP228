@@ -1,7 +1,7 @@
 package Ex1;
 
 import javax.swing.*;
-import java.awt.FlowLayout;
+import java.awt.*;
 import javax.swing.SwingConstants;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +17,7 @@ public class MainMenu extends JFrame {
         setLayout(new FlowLayout());
 
         title = new JLabel("PONG");
+        title.setForeground(Color.WHITE);
         title.setHorizontalTextPosition(SwingConstants.CENTER);
         add(title);
 
@@ -37,14 +38,13 @@ public class MainMenu extends JFrame {
             MainMenu.this.setVisible(false);
             MainMenu.this.dispose();
 
-
-            //PongFrame is the class of the game panel - need to change
             //open pong window if action command is from start game button
-            if (e.getActionCommand() == "Start Game") {
-                PongFrame pongFrame = new PongFrame();
-                pongFrame.setDefaultCloseOperation(pongFrame.EXIT_ON_CLOSE);
-                pongFrame.setLocationRelativeTo(null);
-                pongFrame.setVisible(true);
+            if (e.getActionCommand() == "Start") {
+                GameFrame gameFrame = new GameFrame();
+                gameFrame.setDefaultCloseOperation(gameFrame.EXIT_ON_CLOSE);
+                gameFrame.setLocationRelativeTo(null);
+                gameFrame.setVisible(true);
+                gameFrame.Update();
             }
         }
     }
